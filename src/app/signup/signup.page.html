@@ -1,0 +1,25 @@
+<ion-content class="ion-padding">
+  <h1>Create Account,</h1>
+  <h3>Sign up to get started!</h3>
+
+  <form>
+    <div class="form-field">
+      <label ngClass="focused ? 'label-focused' : ''">Full Name</label>
+      <input type="tel" (focus)="focused = true" (blur)="onBlurName($event)" />
+    </div>
+    <div class="form-field">
+      <label ngClass="focused ? 'label-focused' : ''">Phone Number</label>
+      <input type="tel" (focus)="focused = true" (blur)="onBlurphone($event)" />
+    </div>
+    <div class="form-field">
+      <label ngClass="focused ? 'label-focused' : ''">OTP</label>
+      <input type="tel" (focus)="focused = true" (blur)="onBlurOTP($event)" />
+    </div>
+    
+    
+    <ion-button class="logintbn"  expand='block'>Register</ion-button>
+    <ion-button class="fbtbn" expand='block'><ion-icon name='logo-facebook'></ion-icon> Connect with Facebook</ion-button>
+  </form>
+
+  <p class="footer-text">I'm already a member, <a [routerLink]="['/login']">Sign In</a></p>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-content class="ion-padding">
+  <h1>Welcome,</h1>
+  <h3>Sign in to continue!</h3>
+
+  <form>
+    <div class="form-field">
+      <label [ngClass]="focused ? 'label-focused' : ''">Mobile Number</label>
+      <input type="tel" (focus)="focused = true" (blur)="onBlurphone($event)" />
+    </div>
+    <div class="form-field">
+      <label [ngClass]="focused ? 'label-focused' : ''">OTP</label>
+      <input type="number" (focus)="focused = true" (blur)="onBlurOTP($event)" />
+    </div>
+    
+    
+    <label class="forgot-password-link">Resend OTP</label>
+
+    <ion-button class="logintbn"  expand='block' (click)="doLogin()">Login</ion-button>
+    <ion-button class="fbtbn" expand='block'><ion-icon name='logo-facebook'></ion-icon> Connect with Facebook</ion-button>
+    
+  </form>
+
+  <p class="footer-text">I'm a new user, <a [routerLink]="['/signup']">Sign Up</a></p>
+</ion-content>
